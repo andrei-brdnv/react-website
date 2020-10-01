@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/navbar"
+import Navbar from "./components/navbar";
+import Home from "./pages/home";
 import Contact from "./pages/contact";
 import About from "./pages/about";
 import Projects from "./pages/projects";
@@ -13,6 +14,7 @@ function App() {
         <Router>
             <Navbar />
             <Switch>
+                <Route path="/" exact component={Home} />
                 <Route path="/contact" exact component={Contact} />
                 <Route path="/about" component={About} />
                 <Route path="/projects" component={Projects} />
